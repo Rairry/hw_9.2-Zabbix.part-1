@@ -24,6 +24,7 @@
 
 *Приложите скриншот авторизации в админке.*
 *Приложите текст использованных команд в GitHub.*
+
 ![image](https://user-images.githubusercontent.com/124167007/220482791-e60c1542-7fe6-4b20-8b42-3a7c8b52dfa2.png)
 
 apt install postgresql
