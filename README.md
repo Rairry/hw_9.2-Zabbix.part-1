@@ -24,6 +24,19 @@
 
 *Приложите скриншот авторизации в админке.*
 *Приложите текст использованных команд в GitHub.*
+![image](https://user-images.githubusercontent.com/124167007/220482791-e60c1542-7fe6-4b20-8b42-3a7c8b52dfa2.png)
+
+apt install postgresql
+wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4+debian11_all.deb
+dpkg -i zabbix-release_6.0-4+debian11_all.deb
+apt update
+apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+su - postgres -c 'psql --command "CREATE USER zabbix WITH PASSWORD '\'123456789\'';"'
+su - postgres -c 'psql --command "CREATE DATABASE zabbix OWNER zabbix;"'
+zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
+sudo nano /etc/zabbix/zabbix_server.conf
+systemctl restart zabbix-server apache2 # zabbix-agentsudo
+systemctl enable zabbix-server apache2 # zabbix-agent
 
 ---
 
