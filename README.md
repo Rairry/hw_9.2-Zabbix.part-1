@@ -23,9 +23,11 @@
 Установите Zabbix Server с веб-интерфейсом.
 
 *Приложите скриншот авторизации в админке.*
-<br> <br> *Приложите текст использованных команд в GitHub.*
+<br>
 
 ![image](https://user-images.githubusercontent.com/124167007/220482791-e60c1542-7fe6-4b20-8b42-3a7c8b52dfa2.png)
+
+<br> *Приложите текст использованных команд в GitHub.*
 
 apt install postgresql
 <br> wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4+debian11_all.deb
