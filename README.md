@@ -46,9 +46,27 @@ apt install postgresql
 Установите Zabbix Agent на два хоста.
 
 *Приложите скриншот раздела Configuration > Hosts, где видно, что агенты подключены к серверу.*
+
+![image](https://user-images.githubusercontent.com/124167007/220699859-d2e85dad-6c04-43cf-b733-8d850825169e.png)
+
 <br> *Приложите скриншот лога zabbix agent, где видно, что он работает с сервером.*
+
+![image](https://user-images.githubusercontent.com/124167007/220699123-4c943bd9-c9fa-4fd9-99ba-f8b278e092ec.png)
+
 <br> *Приложите скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.*
+
+![image](https://user-images.githubusercontent.com/124167007/220699521-80d9798d-29a5-4f13-be59-85833680af7d.png)
+
 <br> *Приложите текст использованных команд в GitHub.*
+
+<br> wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4+debian11_all.deb
+<br> dpkg -i zabbix-release_6.0-4+debian11_all.deb
+<br> apt update
+<br> apt install zabbix-agent
+<br> systemctl restart zabbix-agent
+<br> nano /etc/zabbix/zabbix_agentd.conf
+<br> systemctl restart zabbix-agent.service
+<br> tail -f /var/log/zabbix/zabbix_agentd.log
 
 ---
 ## Задание со звёздочкой*
